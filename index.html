@@ -7,17 +7,40 @@
 <body>
   <script>
     // Your JavaScript goes here!
-    let words = ['Rock',
+    /* let words = ['Rock',
 'Paper',
 'Scissors'];
     
     
     function getComputerChoice(arr) {
         return arr[Math.floor(Math.random() * arr.length)];
+        console.log();
+    } */
 
+    //CPU Choice
+    function getComputerChoice(){
+        let item = ["Rock", "Paper", "Scissors"];
+        return item[Math.floor(Math.random() * item.length)];
+        
     }
 
-    console.log(getComputerChoice(words));
+
+
+    let playerSelection = prompt("Rock, Paper, Scissors!");
+    
+    function game(){
+        if (playerSelection === "Rock" && getComputerChoice() === "Rock") {
+            console.log("Tie");
+        } else if (playerSelection === "Rock" && getComputerChoice() === "Paper") {
+            console.log("You Lose! Paper beats Rock");
+        } else {
+            console.log("Winner! Rock beats Scissors");
+        }
+            
+    }
+    
+    console.log(game());
+    /* console.log(getComputerChoice(words)); */
 
 
 
