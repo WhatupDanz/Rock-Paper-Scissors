@@ -36,28 +36,25 @@
 
     function playRound(playerSelection, computerSelection){
      
-      
-      
-        if (playerSelection === computerSelection)  {
-          return `its a tie! You both picked ${playerSelection}`;
-      
+          if (playerSelection === computerSelection)  {
+            return `its a tie! You both picked ${playerSelection}. Current score is Player: ${humanWins} to PC: ${compWins}`;
+          
         } else if (playerSelection === "rock" && computerSelection === "scissors") {
-      return "You win! Rock beats Scissors";
-          humanWins ++;
+            humanWins ++;
+            return `You win! Rock beats Scissors. Current score is Player: ${humanWins} to PC: ${compWins}`;
           
-        } else if (playerSelection === "paper" && computerSelection === "rock") {
-      return "You win! Paper beats Rock";
-          humanWins ++;
+          } else if (playerSelection === "paper" && computerSelection === "rock") {
+            humanWins ++;
+            return `You win! Paper beats Rock. Current score is Player: ${humanWins} to PC: ${compWins}`;
           
-
-        } else if (playerSelection === "scissors" && computerSelection === "paper") {
-          return "You Win! Scissors beats paper";
-          humanWins ++;
+          } else if (playerSelection === "scissors" && computerSelection === "paper") {
+            humanWins ++;
+            return `You Win! Scissors beats paper. Current score is Player: ${humanWins} to PC: ${compWins}`;
           
-
-        } else {
-          return `You lose! ${computerSelection} beats ${playerSelection}`
-          compWins ++;
+          } else {
+            compWins ++;
+            return `You lose! ${computerSelection} beats ${playerSelection}. Current score is Player: ${humanWins} to PC: ${compWins}`
+          
           
         }
       }
