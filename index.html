@@ -8,14 +8,7 @@
   <script>
     
     
-    //Intial CPU Choice code
-    /* let words = ['Rock',
-'Paper',
-'Scissors'];
-    function getComputerChoice(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-        console.log();
-    } */
+   
 
     /*CPU Choice (Working as it should)*/
     function getComputerChoice(){
@@ -24,12 +17,7 @@
         
     }
 
-    /*Prompt for player selection*/
-      /* function getPlayerSelection(){
-        let userAnswer = prompt("Rock, Paper, Scissors!").toLowerCase();
-        return userAnswer;
-        
-      } */
+   
       
       let compWins = 0;
       let humanWins = 0;
@@ -59,7 +47,6 @@
         }
       }
       
-      
 
       function game(){
         
@@ -67,20 +54,16 @@
           let playerSelection = prompt("Rock, Paper, Scissors!").toLowerCase();
           const computerSelection = getComputerChoice();
           console.log(playRound(playerSelection, computerSelection));
-          if (i >= 5) {
-            console.log("Test");
+          if (playerSelection === computerSelection) {
+            i --;
 
           } 
 
         } 
           
       }
-      
-   
+
     
-    
-    /* console.log(playRound(playerSelection, computerSelection)); */
-    /* console.log(getComputerChoice(words)); */
 game();
 
 
